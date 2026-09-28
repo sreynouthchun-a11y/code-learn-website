@@ -25,36 +25,50 @@ nav { display: flex; align-items: center; }
 nav a { color: #ddd; margin-left: 24px; text-decoration: none; transition: color .2s; }
 nav a:hover { color: var(--primary); }
 .theme-toggle { background: none; border: none; font-size: 1.2rem; cursor: pointer; margin-left: 20px; }
+.menu-btn { display: none; background: none; border: none; color: #fff; font-size: 1.5rem; cursor: pointer; }
 .hero { background: linear-gradient(135deg, #6c5ce7, #a29bfe); color: #fff; text-align: center; padding: 100px 20px; }
 .hero h1 { font-size: 3rem; margin-bottom: 16px; }
 .subtitle { font-size: 1.2rem; max-width: 600px; margin: 0 auto 30px; }
-.btn { display: inline-block; background: #fff; color: var(--primary); padding: 14px 32px; border-radius: 30px; text-decoration: none; font-weight: bold; transition: transform .2s; }
+.btn { display: inline-block; background: #fff; color: var(--primary); padding: 14px 32px; border-radius: 30px; text-decoration: none; font-weight: bold; transition: transform .2s; border: none; cursor: pointer; font-size: 1rem; }
 .btn:hover { transform: translateY(-3px); }
 .section { padding: 70px 0; }
-.section-title { text-align: center; font-size: 2.2rem; margin-bottom: 40px; }
+.section-title { text-align: center; font-size: 2.2rem; margin-bottom: 16px; }
+.section > .container > p { text-align: center; margin-bottom: 30px; color: #666; }
 .progress-section { background: var(--light); }
 .progress-bar-container { width: 100%; max-width: 500px; margin: 0 auto 10px; background: var(--border); border-radius: 20px; height: 30px; position: relative; overflow: hidden; }
 .progress-bar { height: 100%; background: linear-gradient(90deg, #6c5ce7, #a29bfe); width: 0%; transition: width .5s; }
 .progress-text { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-weight: bold; font-size: .9rem; color: var(--text); }
 .progress-label { text-align: center; font-size: .9rem; color: #666; }
+.cert-cta { text-align: center; margin-top: 20px; padding: 16px; background: #d4edda; border-radius: 10px; }
 .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px; }
 .card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 12px; padding: 24px; box-shadow: 0 4px 14px rgba(0,0,0,.06); transition: transform .2s; }
 .card:hover { transform: translateY(-6px); }
 .card-icon { font-size: 2.5rem; margin-bottom: 12px; }
 .card h3 { margin-bottom: 10px; }
-.code-block { background: var(--dark); color: #7bed9f; padding: 12px; border-radius: 8px; margin: 14px 0; font-family: monospace; font-size: .9rem; overflow-x: auto; }
+.code-block { background: var(--dark); color: #7bed9f; padding: 12px; border-radius: 8px; margin: 14px 0; font-family: monospace; font-size: .9rem; overflow-x: auto; white-space: pre; }
 .btn-small { display: inline-block; background: var(--primary); color: #fff; padding: 8px 18px; border-radius: 20px; text-decoration: none; font-size: .9rem; border: none; cursor: pointer; }
 .practice { background: var(--light); }
+.tabs { display: flex; gap: 10px; justify-content: center; margin-bottom: 20px; }
+.tab-btn { padding: 10px 24px; border: 2px solid var(--primary); background: transparent; color: var(--primary); border-radius: 20px; cursor: pointer; font-size: 1rem; font-weight: bold; }
+.tab-btn.active { background: var(--primary); color: #fff; }
 .editor { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 30px 0; }
 .editor-pane label, .preview-pane label { display: block; font-weight: bold; margin-bottom: 8px; }
 textarea { width: 100%; height: 220px; font-family: monospace; padding: 12px; border: 1px solid #ccc; border-radius: 8px; resize: vertical; background: var(--card-bg); color: var(--text); }
 .preview-pane iframe { width: 100%; height: 220px; border: 1px solid #ccc; border-radius: 8px; background: #fff; }
+.console-output { width: 100%; height: 220px; background: var(--dark); color: #7bed9f; border-radius: 8px; padding: 12px; font-family: monospace; font-size: .9rem; overflow-y: auto; white-space: pre-wrap; }
 #run-btn { display: block; margin: 0 auto; background: var(--primary); color: #fff; border: none; padding: 12px 30px; border-radius: 30px; cursor: pointer; font-size: 1rem; }
+.snippets-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+.snippet { background: var(--card-bg); border: 1px solid var(--border); border-radius: 12px; padding: 20px; }
+.snippet-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+.snippet-header h4 { color: var(--primary); }
+.copy-btn { background: var(--primary); color: #fff; border: none; padding: 6px 14px; border-radius: 15px; cursor: pointer; font-size: .8rem; }
+.copy-btn.copied { background: #2ecc71; }
+.snippet pre { background: var(--dark); color: #7bed9f; padding: 12px; border-radius: 8px; font-family: monospace; font-size: .85rem; overflow-x: auto; white-space: pre; }
 .quiz-container { max-width: 700px; margin: 0 auto; }
 .quiz-question { background: var(--card-bg); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
 .quiz-question h3 { margin-bottom: 16px; }
 .quiz-options { display: grid; gap: 10px; }
-.quiz-option { padding: 12px; border: 2px solid var(--border); border-radius: 8px; background: var(--card-bg); color: var(--text); cursor: pointer; text-align: left; transition: all .2s; }
+.quiz-option { padding: 12px; border: 2px solid var(--border); border-radius: 8px; background: var(--card-bg); color: var(--text); cursor: pointer; text-align: left; transition: all .2s; font-size: .95rem; }
 .quiz-option:hover { border-color: var(--primary); }
 .quiz-option.correct { border-color: #2ecc71; background: #d4edda; }
 .quiz-option.incorrect { border-color: #e74c3c; background: #f8d7da; }
@@ -67,5 +81,34 @@ textarea { width: 100%; height: 220px; font-family: monospace; padding: 12px; bo
 .lesson-content p { margin-bottom: 14px; }
 .lesson-content .code-block { margin: 16px 0; }
 .lesson-nav { display: flex; justify-content: space-between; gap: 10px; flex-wrap: wrap; }
+.cert-page { padding: 40px 0; min-height: 70vh; }
+.cert-form { max-width: 500px; margin: 0 auto 40px; text-align: center; background: var(--card-bg); border: 1px solid var(--border); border-radius: 12px; padding: 30px; }
+.cert-form h2 { margin-bottom: 10px; }
+.cert-input { width: 100%; padding: 12px; margin: 16px 0; border: 1px solid #ccc; border-radius: 8px; font-size: 1rem; background: var(--card-bg); color: var(--text); }
+.certificate { max-width: 800px; margin: 0 auto; }
+.cert-border { background: var(--card-bg); border: 4px double var(--primary); border-radius: 12px; padding: 50px 40px; text-align: center; }
+.cert-header { color: var(--primary); font-size: 1.5rem; font-weight: bold; margin-bottom: 20px; }
+.certificate h1 { font-size: 2rem; margin-bottom: 20px; }
+.cert-sub { margin: 8px 0; color: #666; }
+.cert-name { font-size: 2.2rem; color: var(--primary); font-weight: bold; margin: 16px 0; font-style: italic; }
+.cert-course { font-size: 1.3rem; font-weight: bold; margin: 12px 0; }
+.cert-footer { display: flex; justify-content: space-between; margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); font-size: .9rem; color: #666; }
+.cert-actions { text-align: center; margin-top: 20px; display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+.back-to-top { position: fixed; bottom: 30px; right: 30px; width: 50px; height: 50px; border-radius: 50%; background: var(--primary); color: #fff; border: none; font-size: 1.3rem; cursor: pointer; opacity: 0; visibility: hidden; transition: all .3s; z-index: 99; box-shadow: 0 4px 12px rgba(0,0,0,.2); }
+.back-to-top.visible { opacity: 1; visibility: visible; }
+.back-to-top:hover { transform: translateY(-3px); }
 .footer { background: var(--dark); color: #aaa; text-align: center; padding: 24px 0; }
-@media (max-width: 700px) { .editor { grid-template-columns: 1fr; } .hero h1 { font-size: 2.2rem; } }
+@media (max-width: 700px) {
+  .editor { grid-template-columns: 1fr; }
+  .hero h1 { font-size: 2.2rem; }
+  .menu-btn { display: block; }
+  nav { display: none; position: absolute; top: 100%; left: 0; right: 0; background: var(--dark); flex-direction: column; padding: 10px 0; }
+  nav.open { display: flex; }
+  nav a { margin: 10px 0; width: 100%; text-align: center; }
+  .theme-toggle { margin-left: 0; }
+}
+@media print {
+  .header, .footer, .cert-form, .cert-actions, .theme-toggle { display: none !important; }
+  body { background: #fff; }
+  .cert-border { border-color: #6c5ce7; }
+}

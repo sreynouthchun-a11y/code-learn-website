@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Certificate - CodeLearn</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container nav">
+      <div class="logo">&lt;/&gt; CodeLearn</div>
+      <nav>
+        <a href="index.html">← Back to Home</a>
+        <button id="theme-toggle" class="theme-toggle" title="Toggle dark mode">🌙</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="cert-page">
+    <div class="container">
+      <div class="cert-form" id="cert-form">
+        <h2>🏆 Certificate of Completion</h2>
+        <p>Enter your name to generate your certificate.</p>
+        <input type="text" id="cert-name" placeholder="Your full name" class="cert-input">
+        <button class="btn" id="generate-cert">Generate Certificate</button>
+      </div>
+
+      <div class="certificate" id="certificate" style="display:none;">
+        <div class="cert-border">
+          <div class="cert-header">CodeLearn</div>
+          <h1>Certificate of Completion</h1>
+          <p class="cert-sub">This certifies that</p>
+          <div class="cert-name" id="cert-display-name">Student Name</div>
+          <p class="cert-sub">has successfully completed the</p>
+          <div class="cert-course">Web Development Fundamentals Course</div>
+          <p class="cert-sub">covering HTML, CSS, JavaScript, and Python</p>
+          <div class="cert-footer">
+            <div class="cert-date" id="cert-date"></div>
+            <div class="cert-sign">CodeLearn Instructor</div>
+          </div>
+        </div>
+        <div class="cert-actions">
+          <button class="btn-small" id="print-cert">🖨️ Print / Save as PDF</button>
+          <button class="btn-small" id="reset-cert">✏️ Edit Name</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 CodeLearn. Built with ❤️ for learners.</p>
+    </div>
+  </footer>
+
+  <script src="js/certificate.js"></script>
+</body>
+</html>
