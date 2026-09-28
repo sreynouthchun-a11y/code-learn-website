@@ -66,3 +66,21 @@ document.querySelectorAll('.quiz-question').forEach(q => {
     });
   });
 });
+
+// Reset quiz
+const resetBtn = document.getElementById('reset-quiz');
+if (resetBtn) {
+  resetBtn.addEventListener('click', () => {
+    score = 0;
+    answered = 0;
+    document.querySelectorAll('.quiz-question').forEach(q => {
+      delete q.dataset.answered;
+      q.querySelectorAll('.quiz-option').forEach(o => {
+        o.classList.remove('correct', 'incorrect');
+      });
+      const fb = q.querySelector('.quiz-feedback');
+      fb.textContent = '';
+    });
+    document.getElementById('quiz-score').textContent = '';
+  });
+}
