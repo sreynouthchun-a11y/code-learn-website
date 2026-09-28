@@ -1,4 +1,4 @@
-// Lesson content
+// Lesson data
 const lessonData = {
   html: {
     title: 'HTML Basics',
@@ -17,18 +17,19 @@ const lessonData = {
   &lt;/body&gt;
 &lt;/html&gt;</pre></div>
       <h2>Common Tags</h2>
-      <p><strong>&lt;h1&gt; to &lt;h6&gt;</strong> — Headings<br>
-         <strong>&lt;p&gt;</strong> — Paragraphs<br>
-         <strong>&lt;a&gt;</strong> — Links<br>
-         <strong>&lt;img&gt;</strong> — Images<br>
-         <strong>&lt;ul&gt; / &lt;ol&gt;</strong> — Lists</p>
+      <div class="code-block"><pre>&lt;h1&gt; to &lt;h6&gt;  - Headings
+&lt;p&gt;          - Paragraphs
+&lt;a&gt;          - Links
+&lt;img&gt;        - Images
+&lt;ul&gt;/&lt;li&gt;   - Lists
+&lt;div&gt;        - Container</pre></div>
     `
   },
   css: {
     title: 'CSS Styling',
     content: `
       <h2>What is CSS?</h2>
-      <p>CSS (Cascading Style Sheets) is used to style and layout web pages. It controls colors, fonts, spacing, and responsive design.</p>
+      <p>CSS (Cascading Style Sheets) controls the visual presentation of HTML elements — colors, fonts, spacing, and layout.</p>
       <h2>Basic Syntax</h2>
       <div class="code-block"><pre>selector {
   property: value;
@@ -44,49 +45,55 @@ h1 {
   color: #6c5ce7;
   text-align: center;
 }</pre></div>
-      <h2>Key Properties</h2>
-      <p><strong>color</strong> — text color<br>
-         <strong>background-color</strong> — background<br>
-         <strong>font-size</strong> — text size<br>
-         <strong>margin / padding</strong> — spacing<br>
-         <strong>display</strong> — layout mode</p>
+      <h2>Box Model</h2>
+      <div class="code-block"><pre>.card {
+  margin: 20px;      /* space outside */
+  border: 1px solid #ccc;
+  padding: 16px;     /* space inside */
+  width: 300px;
+}</pre></div>
     `
   },
   js: {
     title: 'JavaScript',
     content: `
       <h2>What is JavaScript?</h2>
-      <p>JavaScript is a programming language that adds interactivity to web pages. It can respond to user actions, manipulate the DOM, and make network requests.</p>
+      <p>JavaScript adds interactivity and dynamic behavior to web pages. It can respond to user actions, manipulate the DOM, and fetch data.</p>
       <h2>Variables</h2>
-      <div class="code-block"><pre>let name = "World";
-const age = 25;
-var old = "deprecated";
+      <div class="code-block"><pre>let name = "CodeLearn";
+const year = 2026;
+var old = "avoid this";
 
-console.log("Hello, " + name);</pre></div>
+console.log(name, year);</pre></div>
       <h2>Functions</h2>
       <div class="code-block"><pre>function greet(name) {
   return "Hello, " + name + "!";
 }
 
-greet("CodeLearn");</pre></div>
+// Arrow function
+const add = (a, b) => a + b;
+
+console.log(greet("World"));
+console.log(add(2, 3));</pre></div>
       <h2>DOM Manipulation</h2>
-      <div class="code-block"><pre>document.getElementById("myBtn").addEventListener("click", () => {
-  alert("Button clicked!");
-});</pre></div>
+      <div class="code-block"><pre>document.getElementById("myBtn")
+  .addEventListener("click", () => {
+    alert("Button clicked!");
+  });</pre></div>
     `
   },
   python: {
     title: 'Python',
     content: `
       <h2>What is Python?</h2>
-      <p>Python is a popular, beginner-friendly programming language used for web development, data science, AI, and automation.</p>
-      <h2>Basic Syntax</h2>
-      <div class="code-block"><pre>print("Hello, World!")
+      <p>Python is a versatile, beginner-friendly programming language used for web development, data science, AI, and automation.</p>
+      <h2>Variables & Types</h2>
+      <div class="code-block"><pre>name = "CodeLearn"     # string
+age = 2026             # integer
+price = 9.99           # float
+active = True          # boolean
 
-name = "CodeLearn"
-age = 2026
-
-print(f"Welcome to {name}")</pre></div>
+print(name, age, price, active)</pre></div>
       <h2>Control Flow</h2>
       <div class="code-block"><pre>score = 85
 
@@ -98,7 +105,23 @@ else:
     print("Keep trying!")</pre></div>
       <h2>Loops</h2>
       <div class="code-block"><pre>for i in range(5):
-    print(i)  # 0, 1, 2, 3, 4</pre></div>
+    print(i)  # 0, 1, 2, 3, 4
+
+# While loop
+count = 0
+while count < 3:
+    print(count)
+    count += 1</pre></div>
+      <h2>Lists & Functions</h2>
+      <div class="code-block"><pre>fruits = ["apple", "banana", "cherry"]
+
+for fruit in fruits:
+    print(fruit)
+
+def square(n):
+    return n ** 2
+
+print(square(4))  # 16</pre></div>
     `
   }
 };
